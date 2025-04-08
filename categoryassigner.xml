@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="workflow" method="upgrade">
+    <name>PLG_WORKFLOW_CATEGORYASSIGNER</name>
+    <author>Muneeb</author>
+    <creationDate>2025-04-07</creationDate>
+    <copyright>Copyright (C) 2005 - 2024 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>muneebshoukat60@gmail.com</authorEmail>
+    <version>1.0.0</version>
+    <description>PLG_WORKFLOW_CATEGORYASSIGNER_XML_DESC</description>
+
+    <namespace path="src">Joomla\Plugin\Workflow\CategoryAssigner</namespace>
+
+    <files>
+		<folder>forms</folder>
+		<folder plugin="categoryassigner">services</folder>
+        <folder>src</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_workflow_categoryassigner.ini</language>
+        <language tag="en-GB">language/en-GB/plg_workflow_categoryassigner.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="default_category"
+                    type="category"
+                    label="JFIELD_PLG_WORKFLOW_DEFAULT_CATEGORY_LABEL"
+                    description="JFIELD_PLG_WORKFLOW_DEFAULT_CATEGORY_DESC"
+                    default="2"
+                    extension="com_content"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
